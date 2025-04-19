@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
+import Footer from "./_components/Footer";
 
 
 
@@ -11,11 +11,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body className="flex min-h-screen flex-col  bg-gradient-to-b from-[#f0f0f0] to-[#e0e0e0]">
         
-      >
+      
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );
