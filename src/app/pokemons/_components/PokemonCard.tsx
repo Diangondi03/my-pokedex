@@ -5,7 +5,7 @@ import React from 'react'
 const PokemonCard = ({pokemon}:{pokemon:any}) => {
 
     return (
-        <Link href="" className='m-0 p-0'>
+        <Link href={`pokemons/${pokemon.id}`} className='m-0 p-0'>
         <div className="card bg-accent shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:-translate-y-1 border-1 border-gray-500 h-full">
             <figure className="px-10 pt-10">
             <img src={pokemon.sprites.front_default} alt={pokemon.name} className="rounded-xl w-32 h-32 object-contain" />

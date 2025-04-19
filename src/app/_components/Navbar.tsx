@@ -18,9 +18,7 @@ export default function Navbar() {
             <Link href="/pokemons" className="hover:text-red-200 transition-colors">
               Pokemons
             </Link>
-            <Link href="/moves" className="hover:text-red-200 transition-colors">
-              Moves
-            </Link>
+
             <Link href="/objects" className="hover:text-red-200 transition-colors">
               Objects
             </Link>
@@ -31,9 +29,9 @@ export default function Navbar() {
           <SearchInput/>
         </div>
 
-        <MobileNavToggle/>
         
       </div>
+        <MobileNavToggle/>
        
     </nav>
   )

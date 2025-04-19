@@ -1,5 +1,6 @@
 "use client"
-import { Link, Menu, Search, X } from 'lucide-react'
+import { Menu, Search, X } from 'lucide-react'
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 const MobileNavToggle = () => {
@@ -7,7 +8,7 @@ const MobileNavToggle = () => {
     return (
         <>
             <button
-            className="absolute right-4 top-2 md:hidden text-white hover:bg-red-700 btn btn-square btn-ghost border-0"
+            className="absolute top-2 right-4  md:hidden text-white hover:bg-red-700 btn btn-square btn-ghost border-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -19,13 +20,11 @@ const MobileNavToggle = () => {
                     <Link href="/" className="py-2 hover:text-red-200 transition-colors">
                     Home
                     </Link>
-                    <Link href="/pokemon" className="py-2 hover:text-red-200 transition-colors">
+                    <Link href="/pokemons" className="py-2 hover:text-red-200 transition-colors">
                     Pokemons
                     </Link>
-                    <Link href="/move" className="py-2 hover:text-red-200 transition-colors">
-                    Moves
-                    </Link>
-                    <Link href="/object" className="py-2 hover:text-red-200 transition-colors">
+
+                    <Link href="/objects" className="py-2 hover:text-red-200 transition-colors">
                     Objects
                     </Link>
                     <div className="pt-2 relative">
