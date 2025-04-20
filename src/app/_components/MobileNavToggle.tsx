@@ -5,6 +5,20 @@ import React, { useState } from 'react'
 
 const MobileNavToggle = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [search, setSearch] = useState<string>('')
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(e.target.value)
+    }
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        if (search == '') return
+        e.preventDefault()
+        // Handle search submit logic here
+        handleClose()
+        window.location.href = `/pokemons/${search}`
+    }
+    const handleClose = () => {
+        setIsMenuOpen(false)
+    }
     return (
         <>
             <button
@@ -17,26 +31,32 @@ const MobileNavToggle = () => {
             {isMenuOpen && (
                 <div className="md:hidden mt-2 pt-2 pb-4 px-4 bg-red-700">
                 <div className="flex flex-col space-y-3">
-                    <Link href="/" className="py-2 hover:text-red-200 transition-colors">
+                    <Link href="/" onClick={handleClose} className="py-2 hover:text-red-200 transition-colors">
                     Home
                     </Link>
-                    <Link href="/pokemons" className="py-2 hover:text-red-200 transition-colors">
+                    <Link href="/pokemons" onClick={handleClose} className="py-2 hover:text-red-200 transition-colors">
                     Pokemons
                     </Link>
 
-                    <Link href="/objects" className="py-2 hover:text-red-200 transition-colors">
+                    <Link href="/objects" onClick={handleClose} className="py-2 hover:text-red-200 transition-colors">
                     Objects
                     </Link>
                     <div className="pt-2 relative">
-                    <label className="input bg-red-800 rounded-2xl w-full">
+                    <form onSubmit={handleSubmit} className='relative w-full'>
+                        <label className="input bg-red-800 rounded-2xl w-full">
 
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        className=" bg-red-800 border-red-600 text-white placeholder:text-red-200 focus-visible:ring-red-400"
-                        />
-                    <Search className="absolute right-3 h-4 w-4 text-red-200 cursor-pointer" />
-                    </label>
+                            <input
+                            type="text"
+                            placeholder="Search..."
+                            value={search}
+                            onChange={handleChange}
+                            className=" bg-red-800 border-red-600 text-white placeholder:text-red-200 focus-visible:ring-red-400"
+                            />
+                            <button type='submit' className="btn btn-circle btn-ghost absolute right-1 text-red-200 hover:bg-red-800 border-none">
+                                <Search className=" h-4 w-4 text-red-200 cursor-pointer" />
+                            </button>
+                        </label>
+                    </form>
                     </div>
                 </div>
                 </div>
