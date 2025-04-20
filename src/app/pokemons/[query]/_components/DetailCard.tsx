@@ -1,6 +1,5 @@
 import React from 'react'
 
-//@ts-expect-error
 const DetailCard = ({pokemon}) => {
   return (
     <div className='flex flex-col md:flex-row items-center md:items-start justify-center gap-5 md:gap-10 my-10 p-5 border border-gray-300 rounded-lg shadow-lg w-xs sm:w-md xl:w-6xl md:w-2xl mx-auto'>
