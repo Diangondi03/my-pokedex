@@ -1,5 +1,10 @@
 import React from 'react'
 import PokemonList from './_components/PokemonList'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Pokemons',
+}
 
 const page = () => {
   return (

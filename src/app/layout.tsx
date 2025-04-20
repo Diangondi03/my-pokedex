@@ -11,6 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.png" sizes="any" />
+      </head>
       <body className="flex min-h-screen flex-col relative bg-gradient-to-b from-[#f0f0f0] to-[#e0e0e0]">
         
       

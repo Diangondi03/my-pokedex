@@ -1,6 +1,10 @@
+import { Metadata } from "next";
 import HomeSearchInput from "./_components/HomeSearchInput";
 import font from "./fonts";
-import { Search } from "lucide-react"; // Import the Search icon
+
+export const metadata: Metadata = {
+  title: 'Pokedex',
+}
 
 export default function Home() {
   return (

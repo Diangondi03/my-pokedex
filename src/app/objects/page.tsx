@@ -1,5 +1,10 @@
 import React from 'react'
 import ObjectList from './_components/ObjectList'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Objects',
+}
 
 const page = () => {
   return (
