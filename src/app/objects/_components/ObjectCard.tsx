@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import React from 'react'
 
-const ObjectCard = ({object}:any) => {
+//@ts-ignore
+const ObjectCard = ({object}) => {
   return (
     <div className="card bg-accent shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:-translate-y-1 border-1 border-gray-500 h-full">
       <figure className="px-10 pt-10">

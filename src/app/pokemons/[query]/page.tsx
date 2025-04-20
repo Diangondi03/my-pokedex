@@ -16,6 +16,7 @@ const page = async ({params}:{params:{query:string}}) => {
             
         )
     } catch (error) {
+        console.log(error)
         return <h1 className='text-center my-10 text-2xl'>Pokemon Not Found</h1>
     }
 

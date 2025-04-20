@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const PokemonCard = ({pokemon}:{pokemon:any}) => {
+//@ts-ignore
+const PokemonCard = ({pokemon}) => {
 
     return (
         <Link href={`pokemons/${pokemon.id}`} className='m-0 p-0'>

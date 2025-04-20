@@ -1,6 +1,7 @@
 import React from 'react'
 
-const DetailCard = ({pokemon}:any) => {
+//@ts-ignore
+const DetailCard = ({pokemon}) => {
   return (
     <div className='flex flex-col md:flex-row items-center md:items-start justify-center gap-5 md:gap-10 my-10 p-5 border border-gray-300 rounded-lg shadow-lg w-xs sm:w-md xl:w-6xl md:w-2xl mx-auto'>
     <div className='flex flex-col items-center border-b border-gray-300 md:border-b-0 md:border-r md:border-gray-300 pb-5 md:pb-0 md:pr-10'>

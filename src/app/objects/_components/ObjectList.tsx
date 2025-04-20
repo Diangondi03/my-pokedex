@@ -42,7 +42,7 @@ const ObjectList =  () => {
 
     const loadMoreObjects = async () => {
         const apiObject = await getObjects()
-        setObjects(pokemons => [...objects, ...apiObject])
+        setObjects(objects => [...objects, ...apiObject])
         setOffset(offset => offset + NUMBER_OF_OBJECTS)
     }
 
