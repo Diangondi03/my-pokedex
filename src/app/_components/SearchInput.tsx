@@ -18,8 +18,8 @@ const SearchInput = () => {
     <label className="input bg-red-400 rounded-2xl">
       <form onSubmit={handleSubmit} className='relative w-full'>
 
-        <input type="text" placeholder="Search" className="pr-5 bg-red-400" value={search} onChange={handleChange}/>
-        <button type='submit' className="btn btn-circle btn-ghost absolute right-[-10] top-[-10] text-red-200 hover:bg-red-800 border-none">
+        <input type="text" placeholder="Search" className="pr-5 bg-red-400 text-white" value={search} onChange={handleChange}/>
+        <button type='submit' className="btn btn-circle btn-ghost absolute right-[-10] top-[-10] text-white hover:bg-red-800 border-none">
 
           <Search className="h-4 w-4" />
         </button>
