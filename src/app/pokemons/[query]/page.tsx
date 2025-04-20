@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: 'Pokemon Detail',
   }
 
-const page = async ({params}:{params:{query:string}}) => {
+const page = async ({params}) => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.query}`)
 
     try{
