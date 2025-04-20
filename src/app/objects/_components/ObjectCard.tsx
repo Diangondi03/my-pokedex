@@ -1,6 +1,7 @@
 import React from 'react'
+import { Root } from '../objectResponseType'
 
-const ObjectCard = ({object}) => {
+const ObjectCard = ({object} : {object:Root}) => {
   return (
     <div className="card bg-accent shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:-translate-y-1 border-1 border-gray-500 h-full">
       <figure className="px-10 pt-10">

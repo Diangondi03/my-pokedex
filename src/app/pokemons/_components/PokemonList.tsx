@@ -37,8 +37,8 @@ const PokemonList =  () => {
     }
 
     const loadMorePokemon = async () => {
-        const apiPokemons = await getPokemons()
-        setPokemons(pokemons => [...pokemons, ...apiPokemons])
+        const apiPokemons  = await getPokemons()
+        setPokemons((pokemons) => [...pokemons, ...apiPokemons])
         setOffset(offset => offset + NUMBER_OF_POKEMONS)
     }
 

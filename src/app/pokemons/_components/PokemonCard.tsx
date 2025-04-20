@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Root } from '../pokemonResponseType'
 
-const PokemonCard = ({pokemon}) => {
+const PokemonCard = ({pokemon}:{pokemon:Root}) => {
 
     return (
         <Link href={`pokemons/${pokemon.id}`} className='m-0 p-0'>

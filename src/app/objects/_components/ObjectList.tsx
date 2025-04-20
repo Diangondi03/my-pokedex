@@ -34,7 +34,7 @@ const ObjectList =  () => {
         return data
     }
     const getObjects = async()=>{
-        const basicObjectList = await getBasicObjectData(); // Fetch initial list
+        const basicObjectList  = await getBasicObjectData(); // Fetch initial list
         const itemPromises = basicObjectList.map((object) => getObject(object.url)); // Fetching 100 pokemons
         const res = await Promise.all(itemPromises); // Wait for all promises to resolve
         return res
@@ -42,7 +42,7 @@ const ObjectList =  () => {
 
     const loadMoreObjects = async () => {
         const apiObject = await getObjects()
-        setObjects(objects => [...objects, ...apiObject])
+        setObjects((objects) => [...objects, ...apiObject])
         setOffset(offset => offset + NUMBER_OF_OBJECTS)
     }
 
