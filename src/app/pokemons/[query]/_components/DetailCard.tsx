@@ -1,6 +1,6 @@
 import React from 'react'
 
-//@ts-ignore
+//@ts-expect-error
 const DetailCard = ({pokemon}) => {
   return (
     <div className='flex flex-col md:flex-row items-center md:items-start justify-center gap-5 md:gap-10 my-10 p-5 border border-gray-300 rounded-lg shadow-lg w-xs sm:w-md xl:w-6xl md:w-2xl mx-auto'>
@@ -25,7 +25,7 @@ const DetailCard = ({pokemon}) => {
                 <tr className='border-b border-gray-300 hover:bg-gray-50'>
                     <th className='py-4 px-4 font-medium border-r border-gray-300'>Types</th>
                     <td className='py-4 px-4 flex'>
-                        {pokemon.types.map((typeInfo: any) =>(
+                        {pokemon.types.map((typeInfo) =>(
                             <div className='flex items-center' key={typeInfo.type.name}>
 
                             <img src={`/types/${typeInfo.type.name}.png`} alt={typeInfo.type.name} className='w-5 h-5 inline-block mr-2' />
